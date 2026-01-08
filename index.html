@@ -1,225 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mohd Farhan Khan | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO / Lighthouse -->
-  <meta name="description" content="Mohd Farhan Khan - Web Developer Portfolio">
-  <meta name="theme-color" content="#000000">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Mohd Farhan Khan | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal portfolio of Mohd Farhan Khan">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ===== Scroll Progress Bar ===== -->
+<!-- SCROLL PROGRESS -->
 <div id="scroll-progress"></div>
 
-<!-- ================= STICKY HEADER / NAV ================= -->
-<header class="fade-down site-header">
+
+
+<!-- HEADER -->
+<header class="site-header">
   <div class="nav-container">
-    <h1 class="logo">Farhan</h1>
+    <div class="logo" id="logo-text"></div>
 
     <nav class="nav-links">
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+
+    <!-- DARK MODE TOGGLE -->
+    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero fade-up">
+<section class="hero fade-up" id="home">
 
-  <!-- PROFILE PHOTO -->
-  <img
-    src="profile.jpg"
-    alt="Mohd Farhan Khan"
-    class="profile-img"
-    loading="lazy"
-    width="150"
-    height="150"
-  >
-
-  <h2>Design • Code • Create</h2>
-  <p>I build clean, responsive and professional websites</p>
-
-  <div class="hero-buttons">
-    <a href="#contact" class="btn">Hire Me</a>
-    <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
-    <a href="resume.pdf" download class="btn resume-btn">Download Resume</a>
+  <!-- ANIMATED BACKGROUND -->
+  <div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+<img src="profile.jpg" class="profile-img cinematic" id="parallaxPortrait">
+
+    <h2>Mohd Farhan Khan</h2>
+    <p><span id="typing"></span><span class="cursor">|</span></p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn neon">Hire Me</a>
+      <a href="resume.pdf" class="btn outline">Download CV</a>
+    </div>
+  </div>
+
 </section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section fade-up">
+<!-- SKILLS -->
+<section class="section" id="skills">
   <h3>Skills</h3>
 
-  <div class="skill">
+  <div class="skill fade-up">
     <span>HTML</span>
-    <div class="bar"><div class="progress html"></div></div>
+    <div class="bar">
+      <div class="progress" data-width="90%"></div>
+    </div>
   </div>
 
-  <div class="skill">
+  <div class="skill fade-up">
     <span>CSS</span>
-    <div class="bar"><div class="progress css"></div></div>
+    <div class="bar">
+      <div class="progress" data-width="85%"></div>
+    </div>
   </div>
 
-  <div class="skill">
+  <div class="skill fade-up">
     <span>JavaScript</span>
-    <div class="bar"><div class="progress js"></div></div>
+    <div class="bar">
+      <div class="progress" data-width="75%"></div>
+    </div>
   </div>
 
-  <div class="skill">
+  <div class="skill fade-up">
     <span>Responsive Design</span>
-    <div class="bar"><div class="progress responsive"></div></div>
+    <div class="bar">
+      <div class="progress" data-width="80%"></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section fade-up">
+<!-- PROJECTS -->
+<section class="section" id="projects">
   <h3>Projects</h3>
+
   <div class="projects">
-    <div class="card">Portfolio Website</div>
-    <div class="card">Business Website</div>
-    <div class="card">Landing Page</div>
+    <div class="card glass fade-up">Portfolio Website</div>
+    <div class="card glass fade-up">Movie Website</div>
+    <div class="card glass fade-up">School Website</div>
   </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience" class="section fade-up">
-  <h3>Experience</h3>
+<!-- EDUCATION -->
+<section class="section">
+  <h3>Education</h3>
 
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="timeline-icon">💼</div>
-      <div class="timeline-content">
-        <span class="timeline-year" data-start="2024">2024 – Present</span>
-        <h4>Web Developer (Freelance)</h4>
-        <p>Building responsive websites using HTML, CSS & JavaScript.</p>
-      </div>
+  <div class="timeline-item fade-up">
+    <div class="timeline-icon">🎓</div>
+    <div>
+      <div class="timeline-year">2023 – Present</div>
+      <p>Integral University</p>
     </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">💻</div>
-      <div class="timeline-content">
-        <span class="timeline-year" data-start="2023">2023 – 2024</span>
-        <h4>Frontend Developer (Learning & Projects)</h4>
-        <p>Created portfolio sites, landing pages & UI layouts.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">🎓</div>
-      <div class="timeline-content">
-        <span class="timeline-year" data-start="2022">2022 – 2023</span>
-        <h4>BCA Student</h4>
-        <p>Studied computer applications & web technologies.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ================= ACHIEVEMENTS ================= -->
-<section class="section fade-up">
-  <h3>Achievements & Awards</h3>
-  <ul class="achievements">
-    <li>Completed multiple responsive website projects</li>
-    <li>Built personal portfolio using HTML, CSS & JavaScript</li>
-    <li>Strong foundation in computer applications (BCA)</li>
-  </ul>
-</section>
-
-<!-- ================= LANGUAGES ================= -->
-<section class="section fade-up">
+<!-- LANGUAGES -->
+<section class="section">
   <h3>Languages</h3>
-
   <div class="languages">
-    <div class="language">
-      <span>Hindi</span>
-      <span class="level">Native</span>
+    <div class="language glass">
+      <strong>Hindi</strong>
+      <div class="level">Native</div>
     </div>
-
-    <div class="language">
-      <span>English</span>
-      <span class="level">Professional</span>
+    <div class="language glass">
+      <strong>English</strong>
+      <div class="level">Intermediate</div>
     </div>
   </div>
 </section>
 
-<!-- ================= SOCIAL ================= -->
-<section class="section fade-up">
-  <h3>Connect With Me</h3>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/" target="_blank" class="social-btn">LinkedIn</a>
-    <a href="https://github.com/" target="_blank" class="social-btn">GitHub</a>
-  </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section class="section fade-up">
-  <h3>About Me</h3>
-  <p>
-    I am a passionate web developer who focuses on clean code,
-    modern layouts and user-friendly design.
-  </p>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section fade-up">
+<!-- CONTACT -->
+<section class="section" id="contact">
   <h3>Contact Me</h3>
-  <form id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required minlength="3">
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-  >
-
-  <!-- Honeypot (spam bots ke liye) -->
-  <input type="text" name="company" style="display:none">
-
-  <textarea name="message" placeholder="Message" required minlength="10"></textarea>
-
-  <button class="btn">Send Message</button>
-  <p id="form-status"></p>
-</form>
-
+  <form action="https://formspree.io/f/xbjngkqr" method="POST" class="fade-up">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+    <button class="btn neon" type="submit">Send Message</button>
+  </form>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  © 2026 Mohd Farhan Khan. All Rights Reserved.
+</footer>
 
-  <!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/918115988844?text=Hello%20Farhan,%20I%20want%20to%20hire%20you"
-  class="whatsapp-btn"
-  target="_blank"
-  aria-label="Chat on WhatsApp"
->
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/918115988844" class="whatsapp-btn" target="_blank">
   💬
   <span class="tooltip">Chat on WhatsApp</span>
 </a>
 
-
-<!-- ================= FOOTER ================= -->
-<footer class="fade-up">
-  © 2025 Mohd Farhan Khan
-</footer>
-
-<!-- JS (defer = Lighthouse boost) -->
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("jZPYk6elU-RMsJXi9");
-  })();
-</script>
